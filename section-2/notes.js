@@ -36,11 +36,13 @@ Big O Shorthands
 
 Big O Values
 
-O(n^2)
-O(n log n)
-O(n)
-O(log n)
+O(N^2)
+O(N log N)
+O(N)
+O(log N)
 O(1)
+
+
 
 */
 
@@ -58,3 +60,7 @@ function logAtMost5(n) {
 
 logAtLeast5(10);
 logAtMost5(10);
+
+// Most primitives (booleans, numbers, undefined, null) are constant space
+// Strings require O(n) space (where n is the string length)
+// Reference types are generally O(n), where n is the length (for arrays) or the number of keys (for objects)
