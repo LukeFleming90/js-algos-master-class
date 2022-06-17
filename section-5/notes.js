@@ -62,10 +62,27 @@ function anagramCheck(str1,str2) {
 
 }
 
-console.log(anagramCheck('aaz','zza'))
-console.log(anagramCheck('rat','car'))
-console.log(anagramCheck('qwerty','qeywrt'))
-console.log(anagramCheck('',''))
-console.log(anagramCheck('anagram','nagaram'))
-console.log(anagramCheck('awesome','awesom'))
-console.log(anagramCheck('texttwisttime','timetwisttext'))
+// console.log(anagramCheck('aaz','zza'))
+// console.log(anagramCheck('rat','car'))
+// console.log(anagramCheck('qwerty','qeywrt'))
+// console.log(anagramCheck('',''))
+// console.log(anagramCheck('anagram','nagaram'))
+// console.log(anagramCheck('awesome','awesom'))
+// console.log(anagramCheck('texttwisttime','timetwisttext'))
+
+function sumZero(arr) {
+    let left = 0;
+    let right = arr.length - 1;
+    while(left < right) {
+        let sum = arr[left] + arr[right]
+        if(sum === 0) {
+            return [arr[left], arr[right]]
+        } else if (sum > 0) {
+            right--;
+        } else {
+            left++;
+        }
+    }
+}
+
+console.log(sumZero([-4,-3,-2,-1,0,1,2,3,10]))
